@@ -1,4 +1,4 @@
-package golibs
+package g
 
 // TODO: After Go 1.18, uses generic
 func MergeMap(m1 map[string]string, m2 map[string]string) map[string]string {

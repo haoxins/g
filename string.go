@@ -1,4 +1,4 @@
-package golibs
+package g
 
 import "strings"
 

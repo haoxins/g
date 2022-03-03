@@ -1,4 +1,4 @@
-module github.com/haoxins/go-libs
+module github.com/haoxins/g
 
 go 1.17
 

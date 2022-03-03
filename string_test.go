@@ -1,4 +1,4 @@
-package golibs
+package g
 
 import (
 	. "github.com/onsi/ginkgo/v2"
