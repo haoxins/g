@@ -6,6 +6,6 @@ import (
 
 func Assert(a, b any) {
 	if a != b {
-		panic(fmt.Errorf("Assert %v to equal %v", a, b))
+		panic(fmt.Errorf("Assert failed! %v [not equals] %v", a, b))
 	}
 }
