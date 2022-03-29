@@ -4,8 +4,8 @@ import (
 	"fmt"
 )
 
-func Assert(a, b any) {
-	if a != b {
-		panic(fmt.Errorf("Assert failed! %v [not equals] %v", a, b))
+func Assert(ok bool, msg string) {
+	if !ok {
+		panic(fmt.Errorf(msg))
 	}
 }

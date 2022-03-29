@@ -6,8 +6,7 @@ import (
 
 var _ = Describe("Test Assert", func() {
 	It("Should work", func() {
-		Assert(123, 123)
-		Assert("123", "123")
+		Assert(123 == 123, "Should equal")
 	})
 
 	It("Should work", func() {
