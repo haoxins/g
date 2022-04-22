@@ -6,4 +6,10 @@
 [Go Docs Badge]: https://pkg.go.dev/badge/github.com/haoxins/g
 [Go Docs]: https://pkg.go.dev/github.com/haoxins/g
 
-* Some tiny utils for Golang
+- Some tiny utils for Golang
+
+### I used
+
+- [go-funk](https://github.com/thoas/go-funk)
+  - A modern Go utility library which provides helpers
+    (map, find, contains, filter, ...)
