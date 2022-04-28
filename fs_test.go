@@ -7,7 +7,7 @@ import (
 
 var _ = Describe("Test fs", func() {
 	It("Copy should work", func() {
-		err := Copy("fs.go", "fs.go.out")
+		err := CopyFile("fs.go", "fs.go.out")
 		Expect(err).To(BeNil())
 	})
 })
