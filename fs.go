@@ -6,6 +6,7 @@ import (
 	"path"
 )
 
+// Exists checks whether a file or directory exists.
 func Exists(filepath string) (bool, error) {
 	_, err := os.Stat(filepath)
 	if err == nil {
@@ -18,6 +19,8 @@ func Exists(filepath string) (bool, error) {
 }
 
 // CopyFile copies a file from source to target.
+// Will overwrite the target if it exists.
+// Will return error if the target directory does not exist.
 func CopyFile(source, target string) error {
 	src, err := os.Open(source)
 	if err != nil {
@@ -40,9 +43,8 @@ func CopyFile(source, target string) error {
 }
 
 // SyncFile copies a file from source to target.
-// If target is in a not exists directory,
-// SyncFile will create the directory first.
-// If target is exists, SyncFile can overwrite it or not.
+// If the target in a directory does not exist, it will be created.
+// If the target exists, can overwrite it or not.
 func SyncFile(source, target string, overwrite bool) error {
 	err := createDirIfNotExists(target)
 	if err != nil {
@@ -54,12 +56,7 @@ func SyncFile(source, target string, overwrite bool) error {
 		return err
 	}
 
-	if !exists {
-		return CopyFile(source, target)
-	}
-
-	if overwrite {
-		os.Remove(target)
+	if !exists || overwrite {
 		return CopyFile(source, target)
 	}
 
