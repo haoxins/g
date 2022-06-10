@@ -10,6 +10,5 @@
 
 ### I used
 
-- [go-funk](https://github.com/thoas/go-funk)
-  - A modern Go utility library which provides helpers
-    (map, find, contains, filter, ...)
+- [lo](https://github.com/samber/lo)
+  - `samber/lo` is a Lodash-style Go library based on Go 1.18+ Generics.
