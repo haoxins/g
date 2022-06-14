@@ -41,3 +41,8 @@ func SetCurrentTime(target *string, layout string) {
 	var now = time.Now()
 	*target = tc.ToString(now, layout)
 }
+
+// Now gets the current time in millisecond.
+func Now() int64 {
+	return time.Now().UnixMilli()
+}
