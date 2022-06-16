@@ -24,4 +24,10 @@ var _ = Describe("Test fs", func() {
 		err := SyncFile("fs.go", "fs/fs.go.out", true)
 		Expect(err).To(BeNil())
 	})
+
+	It("ReadFile should work", func() {
+		s := ReadFile("LICENSE")
+		Expect(s).To(ContainSubstring("MIT License"))
+		Expect(s).To(ContainSubstring("Copyright (c) 2021 Hao Xin"))
+	})
 })

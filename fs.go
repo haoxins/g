@@ -63,6 +63,15 @@ func SyncFile(source, target string, overwrite bool) error {
 	return nil
 }
 
+// ReadFile reads a file and returns its content as string.
+func ReadFile(filepath string) string {
+	bytes, err := os.ReadFile(filepath)
+	if err != nil {
+		return ""
+	}
+	return string(bytes)
+}
+
 func createDirIfNotExists(filename string) error {
 	d := path.Dir(filename)
 	if d == "" {
