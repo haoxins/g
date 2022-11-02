@@ -32,8 +32,9 @@ func ForceInt64(s string, defaultInt64 int64) int64 {
 // String converts the input value to a string.
 // You can pass with a precision number (defaults to 12) if
 // you are converting the float to string.
-//   String(3.1415926, 10)
-//   String(3)
+//
+//	String(3.1415926, 10)
+//	String(3)
 func String(args ...any) string {
 	value := args[0]
 	var precision int = 12 // default
