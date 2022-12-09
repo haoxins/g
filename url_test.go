@@ -7,7 +7,15 @@ import (
 
 var _ = Describe("Test URL", func() {
 	It("EncodeURL should work", func() {
-		encoded := EncodeURL(`https://www.google.com?components=["search"]`)
+		encoded, err := EncodeURL(`https://www.google.com?components=["search"]`)
+		Expect(err).To(BeNil())
 		Expect(encoded).To(Equal("https://www.google.com?components=%5B%22search%22%5D"))
 	})
+
+	It("EncodeURL should work with empty string", func() {
+		encoded, err := EncodeURL("")
+		Expect(err).To(BeNil())
+		Expect(encoded).To(Equal(""))
+	})
+
 })

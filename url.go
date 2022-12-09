@@ -2,13 +2,14 @@ package g
 
 import "net/url"
 
-func EncodeURL(s string) string {
-	parsedURL, err := url.Parse(s)
+func EncodeURL(rawURL string) (string, error) {
+	parsedURL, err := url.Parse(rawURL)
 	if err != nil {
-		return err.Error()
+		return "", err
 	}
 
 	parsedURL.RawQuery = parsedURL.Query().Encode()
 
-	return parsedURL.String()
+	return parsedURL.String(), nil
+}
 }
