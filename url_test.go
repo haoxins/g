@@ -18,4 +18,13 @@ var _ = Describe("Test URL", func() {
 		Expect(encoded).To(Equal(""))
 	})
 
+	It("GetURLHost should work", func() {
+		host, err := GetURLHost(`https://www.google.com?components=["search"]`)
+		Expect(err).To(BeNil())
+		Expect(host).To(Equal("www.google.com"))
+
+		host, err = GetURLHost("")
+		Expect(err).To(BeNil())
+		Expect(host).To(Equal(""))
+	})
 })
