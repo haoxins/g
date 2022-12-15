@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/onsi/ginkgo/v2 v2.5.1
 	github.com/onsi/gomega v1.24.1
-	golang.org/x/exp v0.0.0-20221208152030-732eee02a75a
+	golang.org/x/exp v0.0.0-20221212164502-fae10dda9338
 )
 
 require (

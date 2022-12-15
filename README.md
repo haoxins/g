@@ -8,7 +8,10 @@
 
 - Some tiny utils for Golang
 
-### I used
+### Some awesome libraries
 
 - [lo](https://github.com/samber/lo)
   - `samber/lo` is a Lodash-style Go library based on Go 1.18+ Generics.
+- [mo](https://github.com/samber/mo)
+  - `samber/mo` brings monads and popular FP abstractions to Go projects.
+    `samber/mo` uses the recent Go 1.18+ Generics.
