@@ -29,20 +29,16 @@ var _ = Describe("Test Number", func() {
 
 	It("ForceFloat32 should work", func() {
 		var s = "56.222"
-		Expect(ForceFloat32(s, 0)).To(BeNumerically("<", 56.2221))
-		Expect(ForceFloat32(s, 0)).To(BeNumerically(">", 56.221))
+		Expect(ForceFloat32(s, 0)).To(BeNumerically("~", 56.222, 0.0001))
 		s = "abc"
-		Expect(ForceFloat32(s, 0)).To(BeNumerically("<", 0.0001))
-		Expect(ForceFloat32(s, 0)).To(BeNumerically(">", -0.0001))
+		Expect(ForceFloat32(s, 0)).To(BeNumerically("~", 0, 0.0001))
 	})
 
 	It("ForceFloat64 should work", func() {
 		var s = "43.854"
-		Expect(ForceFloat64(s, 0)).To(BeNumerically("<", 43.8541))
-		Expect(ForceFloat64(s, 0)).To(BeNumerically(">", 43.853))
+		Expect(ForceFloat64(s, 0)).To(BeNumerically("~", 43.854, 0.0001))
 		s = "abc"
-		Expect(ForceFloat64(s, 0)).To(BeNumerically("<", 0.0001))
-		Expect(ForceFloat64(s, 0)).To(BeNumerically(">", -0.0001))
+		Expect(ForceFloat64(s, 0)).To(BeNumerically("~", 0, 0.0001))
 	})
 
 	It("String should work", func() {
