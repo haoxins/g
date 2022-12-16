@@ -29,6 +29,22 @@ func ForceInt64(s string, defaultInt64 int64) int64 {
 	return int64(parsed)
 }
 
+func ForceFloat32(s string, defaultFloat32 float32) float32 {
+	parsed, err := strconv.ParseFloat(s, 32)
+	if err != nil {
+		return defaultFloat32
+	}
+	return float32(parsed)
+}
+
+func ForceFloat64(s string, defaultFloat64 float64) float64 {
+	parsed, err := strconv.ParseFloat(s, 64)
+	if err != nil {
+		return defaultFloat64
+	}
+	return parsed
+}
+
 // String converts the input value to a string.
 // You can pass with a precision number (defaults to 12) if
 // you are converting the float to string.
