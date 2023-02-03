@@ -10,8 +10,9 @@
 
 ### Some awesome libraries
 
+- [conc](https://github.com/sourcegraph/conc)
+  - better structured concurrency for go
 - [lo](https://github.com/samber/lo)
-  - `samber/lo` is a Lodash-style Go library based on Go 1.18+ Generics.
+  - A Lodash-style Go library
 - [mo](https://github.com/samber/mo)
   - `samber/mo` brings monads and popular FP abstractions to Go projects.
-    `samber/mo` uses the recent Go 1.18+ Generics.
