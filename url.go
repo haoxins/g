@@ -21,3 +21,12 @@ func GetURLHost(rawURL string) (string, error) {
 
 	return parsedURL.Host, nil
 }
+
+func GetURLPath(rawURL string) (string, error) {
+	parsedURL, err := url.Parse(rawURL)
+	if err != nil {
+		return "", err
+	}
+
+	return parsedURL.Path, nil
+}

@@ -25,4 +25,14 @@ var _ = Describe("Test URL", func() {
 		Expect(err).To(BeNil())
 		Expect(host).To(Equal(""))
 	})
+
+	It("GetURLPath should work", func() {
+		p, err := GetURLPath(`https://www.google.com/chat/gpt?components=["search"]`)
+		Expect(err).To(BeNil())
+		Expect(p).To(Equal("/chat/gpt"))
+
+		p, err = GetURLPath("")
+		Expect(err).To(BeNil())
+		Expect(p).To(Equal(""))
+	})
 })
