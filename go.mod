@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/onsi/ginkgo/v2 v2.13.2
 	github.com/onsi/gomega v1.30.0
-	golang.org/x/exp v0.0.0-20231127185646-65229373498e
+	golang.org/x/exp v0.0.0-20240103183307-be819d1f06fc
 )
 
 require (

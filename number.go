@@ -13,6 +13,14 @@ func ForceInt(s string, defaultInt int) int {
 	return int(parsed)
 }
 
+func ForceUInt(s string, defaultUInt uint) uint {
+	parsed, err := strconv.ParseUint(s, 10, 64)
+	if err != nil {
+		return defaultUInt
+	}
+	return uint(parsed)
+}
+
 func ForceInt32(s string, defaultInt32 int32) int32 {
 	parsed, err := strconv.ParseInt(s, 10, 32)
 	if err != nil {

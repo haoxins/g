@@ -13,6 +13,15 @@ var _ = Describe("Test Number", func() {
 		Expect(ForceInt(s, -1)).To(Equal(-1))
 	})
 
+	It("ForceUInt should work", func() {
+		var s = "123"
+		Expect(ForceUInt(s, 0)).To(Equal(uint(123)))
+		s = "abc"
+		Expect(ForceUInt(s, 0)).To(Equal(uint(0)))
+		s = "-123"
+		Expect(ForceUInt(s, 0)).To(Equal(uint(0)))
+	})
+
 	It("ForceInt32 should work", func() {
 		var s = "123"
 		Expect(ForceInt32(s, 0)).To(Equal(int32(123)))
