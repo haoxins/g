@@ -14,5 +14,3 @@
   - better structured concurrency for go
 - [lo](https://github.com/samber/lo)
   - A Lodash-style Go library
-- [mo](https://github.com/samber/mo)
-  - `samber/mo` brings monads and popular FP abstractions to Go projects.
