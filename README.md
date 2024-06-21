@@ -11,6 +11,5 @@
 ### Some awesome libraries
 
 - [conc](https://github.com/sourcegraph/conc)
-  - better structured concurrency for go
+- [oops](https://github.com/samber/oops)
 - [lo](https://github.com/samber/lo)
-  - A Lodash-style Go library
