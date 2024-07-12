@@ -16,8 +16,8 @@ func Exists(filepath string) (bool, error) {
 	return false, err
 }
 
-// ReadFile reads a file and returns its content as string.
-func ReadFile(filepath string) string {
+// CatFile reads a file and returns its content as string.
+func CatFile(filepath string) string {
 	bytes, err := os.ReadFile(filepath)
 	if err != nil {
 		return ""

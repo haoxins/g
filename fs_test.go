@@ -15,8 +15,8 @@ var _ = Describe("Test fs", func() {
 		Expect(exists).To(BeFalse())
 	})
 
-	It("ReadFile should work", func() {
-		s := ReadFile("LICENSE")
+	It("CatFile should work", func() {
+		s := CatFile("LICENSE")
 		Expect(s).To(ContainSubstring("MIT License"))
 		Expect(s).To(ContainSubstring("Copyright (c) 2021 Hao Xin"))
 	})

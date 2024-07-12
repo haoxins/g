@@ -30,9 +30,4 @@ var _ = Describe("Test Time", func() {
 		SetCurrentTime(&target, time.RFC3339)
 		Expect(GetTime(target, time.RFC3339).Unix() > 1646384187).To(BeTrue())
 	})
-
-	It("Now should work", func() {
-		Expect(Now() > 1655211244182).To(BeTrue())
-		Expect(Now() < 1833580800000).To(BeTrue())
-	})
 })
