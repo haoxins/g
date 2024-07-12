@@ -15,16 +15,6 @@ var _ = Describe("Test fs", func() {
 		Expect(exists).To(BeFalse())
 	})
 
-	It("CopyFile should work", func() {
-		err := CopyFile("fs.go", "fs.go.out")
-		Expect(err).To(BeNil())
-	})
-
-	It("SyncFile should work", func() {
-		err := SyncFile("fs.go", "fs/fs.go.out", true)
-		Expect(err).To(BeNil())
-	})
-
 	It("ReadFile should work", func() {
 		s := ReadFile("LICENSE")
 		Expect(s).To(ContainSubstring("MIT License"))

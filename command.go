@@ -8,5 +8,5 @@ func Run(name string, arg ...string) (out string, err error) {
 		return err.Error(), err
 	}
 
-	return string(data[:]), nil
+	return string(data), nil
 }
