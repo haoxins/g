@@ -12,4 +12,5 @@
 
 - [conc](https://github.com/sourcegraph/conc)
 - [oops](https://github.com/samber/oops)
+- [Carbon](https://github.com/dromara/carbon)
 - [lo](https://github.com/samber/lo)

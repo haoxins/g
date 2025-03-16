@@ -1,11 +1,11 @@
 package g
 
 import (
-	"fmt"
+	"errors"
 )
 
 func Assert(ok bool, msg string) {
 	if !ok {
-		panic(fmt.Errorf(msg))
+		panic(errors.New(msg))
 	}
 }
