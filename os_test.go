@@ -7,7 +7,7 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-var _ = Describe("Test OS", func() {
+var _ = Describe("Test os", func() {
 	It("Getenv should work", func() {
 		Expect(Getenv("foo", "bar")).To(Equal("bar"))
 		os.Setenv("foo", "baz")
